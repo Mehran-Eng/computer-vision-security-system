@@ -156,65 +156,7 @@ The YOLOv8 model (`yolov8n.pt`) is automatically downloaded on first run. Ensure
 └── README.md            # This file
 ```
 
-## Troubleshooting
 
-### Error: "No module named 'cv2'"
 
-OpenCV is not installed. Reinstall dependencies:
 
-```powershell
-pip install -r requirements.txt --upgrade
-```
-
-### Error: "Could not open camera" or "Failed to open camera"
-
-**Solutions**:
-1. Ensure no other application is using your webcam
-   - Close Zoom, Skype, Teams, or other video conferencing apps
-   - Check browser tabs with camera access
-2. Verify camera hardware:
-   - Check Device Manager (devmgmt.msc) for camera listing
-   - Test camera with another application
-3. Restart the application
-4. Reconnect the USB camera (if external)
-
-### Camera Permission Denied
-
-Windows may prompt for camera access:
-1. Click "Allow" when the permission dialog appears
-2. If prompted in Settings, enable camera access for the Python application
-3. Check Privacy & Security settings in Windows
-
-### Model Download Issues
-
-If `yolov8n.pt` fails to download:
-
-```powershell
-pip install --upgrade ultralytics
-python -c "from ultralytics import YOLO; YOLO('yolov8n.pt')"
-```
-
-### Poor Detection Performance
-
-- Ensure adequate lighting in the monitored area
-- Adjust camera angle for optimal coverage
-- Verify minimum Python version requirements
-- Check system resources (CPU/RAM usage)
-
-### Virtual Environment Activation Issues
-
-If `(venv)` does not appear after activation:
-
-```powershell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-venv\Scripts\Activate.ps1
-```
-
-## License
-
-[Add your license here]
-
-## Support
-
-For issues, questions, or feature requests, please create an issue or contact the development team.
 
